@@ -13,9 +13,6 @@ let empCheck;
 let totalEmpHrs = 0;
 let totalWorkingDays = 0;
 let empDailyWageArr = new Array();
-var empDailyHrsMap = new Map();
-var empDailyWageMap = new Map();
-var empDailyHrsAndWageArr = new Array();
 
 
 // function definition
@@ -46,19 +43,6 @@ while (totalEmpHrs <= MAX_HRS_PER_MONTH && totalWorkingDays < NUM_OF_WORKING_DAY
 
   totalEmpHrs += empHrs;
   empDailyWageArr.push(calWageBased_RateHr(empHrs));
-  empDailyHrsMap.set(totalWorkingDays, empHrs);
-  empDailyWageMap.set(totalWorkingDays, calWageBased_RateHr(empHrs));
-
-  empDailyHrsAndWageArr.push(
-    {
-      day: totalWorkingDays,
-      dailyHours: empHrs,
-      dailyWage: calWageBased_RateHr(empHrs),
-      toString() {
-        return '\nDay' + this.day + ' => Working Hours is ' + this.dailyHours + ' And Wage Earned = ' + this.dailyWage
-      },
-    }
-  );
 }
 
 empWage = calWageBased_RateHr(totalEmpHrs);
