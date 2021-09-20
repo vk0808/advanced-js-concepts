@@ -29,11 +29,11 @@ class EmployeePayrollData {
   }
 }
 
-let employeePayrollData = new EmployeePayrollData(1, "Mark", 30000, "M", "2021-05-22");
+let employeePayrollData = new EmployeePayrollData(1, "Mark", 30000, "M", new Date());
 console.log(employeePayrollData.toString());
 
 employeePayrollData.name = "John";
 console.log(employeePayrollData.toString());
 
-let newEmployeePayrollData = new EmployeePayrollData(1, "Terrisa", 30000, "F", "2021-05-22");
+let newEmployeePayrollData = new EmployeePayrollData(1, "Terrisa", 30000, "F", new Date());
 console.log(newEmployeePayrollData.toString());

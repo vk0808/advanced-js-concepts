@@ -14,7 +14,7 @@ class EmployeePayrollData {
     this.startDate = params[4];
   }
 
-  // getter and setter methods for both name and salary
+  // getter and setter methods for both name
   get name() { return this._name; }
   set name(name) {
     let nameRegex = RegExp('^[A-Z]{1}[a-z]{3,}$');
@@ -32,7 +32,7 @@ class EmployeePayrollData {
   }
 }
 
-let employeePayrollData = new EmployeePayrollData(1, "Mark", 30000, "M", "2021-05-22");
+let employeePayrollData = new EmployeePayrollData(1, "Mark", 30000, "M", new Date());
 console.log(employeePayrollData.toString());
 
 try {
@@ -42,5 +42,5 @@ try {
   console.error(e);
 }
 
-let newEmployeePayrollData = new EmployeePayrollData(1, "Terrisa", 30000, "F", "2021-05-22");
+let newEmployeePayrollData = new EmployeePayrollData(1, "Terrisa", 30000, "F", new Date());
 console.log(newEmployeePayrollData.toString());
